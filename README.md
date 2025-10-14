@@ -85,4 +85,4 @@ Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán t
 ### 6. Kết quả chạy thử các thuật toán theo từng nhóm.
 
 - Uninformed Search:
-  ![GIF 1](assets/bandicam 2025-10-23 22-03-14-654.mp4.gif)
+  ![Uniformed Search GIF](assets/uninformed.gif)
