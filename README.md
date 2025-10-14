@@ -146,3 +146,20 @@ Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán t
     - Time Taken: Backtracking lâu nhất, FC nhanh hơn; Look-Ahead nhanh nhất nhờ prune mạnh.
     - Khả năng tìm giải pháp: Tất cả đảm bảo tìm solution nếu tồn tại, Look-Ahead ổn định nhất với N lớn
 
+---
+### 7. Định hướng phát triển
+Dựa trên kết quả thực nghiệm, có thể xác định một số hướng phát triển tiềm năng cho các thuật toán và hệ thống giải quyết trò chơi 8 quân XE:
+- Cải thiện hiệu năng của Uninformed Search: 
+  Dù BFS và IDS đảm bảo tìm lời giải, chi phí bộ nhớ và số bước duyệt vẫn cao. Việc kết hợp pruning thông minh hoặc heuristic nhẹ có thể giảm đáng kể số trạng thái cần kiểm tra mà vẫn giữ tính đảm bảo của thuật toán.
+- Tối ưu hóa Heuristic / Informed Search:
+  Greedy, A*, Beam Search có thể được cải thiện bằng heuristic kết hợp nhiều yếu tố, ví dụ như số xung đột, khoảng cách từ cột hiện tại đến vị trí hợp lý, hoặc cân nhắc chi phí bước đi. Beam Search có thể thử nghiệm với chiều rộng beam biến thiên theo độ sâu, giúp cân bằng giữa tốc độ và độ phủ của không gian trạng thái.
+- Local Search nâng cao:
+  HC và SA có thể kết hợp restart nhiều lần hoặc hybrid với GA để tăng khả năng thoát khỏi cực trị cục bộ. GA có thể thử nghiệm cơ chế đột biến / lai ghép thích nghi dựa vào trạng thái hiện tại, giúp tăng hiệu quả tìm kiếm trong không gian trạng thái lớn hơn (ví dụ 16–32 quân XE).
+- CSP nâng cao với ràng buộc động:
+  Forward Checking và Look-Ahead có thể được mở rộng bằng constraint propagation nâng cao, kết hợp với heuristic most-constrained-variable hoặc least-constraining-value để giảm số bước duyệt và tăng khả năng mở rộng sang CSP lớn hơn.
+- Khám phá phi xác định và Belief-Based Search:
+  Nhóm And-Or và Belief State Search mở ra hướng nghiên cứu lập kế hoạch phi xác định, robust plan. Đặc biệt, And-Or Search có thể được cải tiến bằng việc tối ưu hóa sinh trạng thái OR và AND nodes, hoặc kết hợp với heuristic đánh giá “độ khả thi” của các nhánh AND–OR, giúp giảm tình trạng dead-end mà vẫn giữ đúng logic AND–OR. Belief State Search có thể thử nghiệm với sampling belief lớn hơn, hoặc kết hợp probabilistic reasoning để tăng khả năng tìm ra kế hoạch tối ưu trong môi trường không chắc chắn.
+- Hệ thống: 
+  Ngoài ra, hệ thống có thể cải thiện them bằng việc tạo them 1 log History, lưu lại các bước duyệt và đặt quân theo dạng text, cho phép người dùng điều chỉnh N quân tùy ý với N từ 1 đến 8. 
+
+Nhìn chung, các định hướng trên không chỉ giúp tăng hiệu quả và tốc độ thực thi, mà còn mở rộng khả năng ứng dụng sang các bài toán CSP phức tạp, lập kế hoạch phi xác định, và các bài toán Local / Metaheuristic trong không gian trạng thái lớn hơn. Đây chính là nền tảng để xây dựng một hệ thống giải thuật mạnh mẽ, linh hoạt và gần thực tế hơn cho trò chơi 8 quân XE cũng như các bài toán mở rộng tương tự.
