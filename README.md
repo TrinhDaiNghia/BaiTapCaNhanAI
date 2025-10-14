@@ -35,4 +35,12 @@ Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán t
 - Giao diện trực quan: Hai bảng 8x8 được hiển thị song song:
   -   Board: vẽ quá trình tìm kiếm cách đặt quân.
   -   Goal Board: hiển thị trạng thái đích ngẫu nhiên (goal state) cho một vài thuật toán cần thiết.
+- Hiển thị kết quả thuật toán:
+  Các quân xe sẽ được vẽ dần sau mỗi bước duyệt ngầm, chi phí - cost sẽ được cập nhật ngay sau mỗi bước đặt quân và thời gian - time sẽ được cập nhật mới khi chạy xong một quá trình đặt quân.
+- Các thuật toán được sử dụng:
+  - `Uninformed Search`: Breadth-First Search (BFS), Depth-First Search (DFS), Depth-Limited Search (DLS), Iterative Deeping Search (IDS)
+  - `Informed Search`: Greedy Best-First Search, A* Search, Uniform Cost Search (UCS)
+  - `Local Search`: Hill Climbing, Simulated Annealing, Beam Search, Genetic
+  - `Non-deterministic`: AND-OR Search, Belief State Search, Comformant Search
+  - `Constraint Satisfaction Problem Search`: Backtracking, Forward-Checking, Look-Ahead (AC-3)
 
