@@ -52,10 +52,19 @@ Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán t
 - Ngôn ngữ lập trình: `Python`
 - Các thư viện được xài: `customtkinter`, `tkinter`, `math`, `random`.
 - Thư viện cần cài đặt: Customtkinter
-    cài trong Command hoặc PowerShell: `pip install customtkinter`
+    Cài trong Command hoặc PowerShell: `pip install customtkinter`
 
 ---
 
 ### 4. Cách sử dụng
 
-- Chạy ứng dụng có name: 
+- Chạy ứng dụng có tên file: `23110131_TrinhDaiNghia_BaitapCanhan.py`
+- Chọn thuật toán: có tất cả 5 combobox cho 5 nhóm thuật toán.
+  - Chọn 1 thuật toán trong 5 nhóm thuật toán.
+  - Khi chọn xong, các combobox còn lại sẽ tự động khóa
+- Chạy thuật toán:
+  - Nhấn nút `Run` để bắt đầu chạy thuật toán.
+  - Quá trình vẽ đặt quân sẽ hiển thị trên Board (bàn cơ bên trái UI).
+  - Cost sẽ cập nhật liên tục sau mỗi lần đặt quân. Sau khi hoàn tất sẽ hiển thị thời gian - Time chạy thuật toán.
+- Xóa kết quả và chạy lại:
+  - Nhấn `Clear Board` để xóa bàn cờ hiện tại và có thể chạy lại thuật toán hoặc chọn lại 1 thuật toán khác.
