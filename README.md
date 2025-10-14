@@ -8,9 +8,11 @@
 **Ngày nộp:** 15/10/2025
 
 ---
+### Tổng Quan 
 
+---
 
-### 1. Mục đích
+### 1. Mục đích xây dựng
 
 Bài tập cá nhân này nhằm mục đích ứng dụng những kiến thức đã học về các thuật toán tìm kiếm trong môn học Trí tuệ Nhân tạo vào trò chơi đặt 8 quân xe.
 Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán tìm kiếm được sử dụng xếp theo 5 nhóm sau: 
@@ -20,3 +22,10 @@ Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán t
 - `Local Search`: Nhóm thuật toán tìm kiếm cục bộ gồm Hill Climbing, Simulated Annealing, Beam Search, Genetic
 - `Non-deterministic`: Nhóm thuật toán tìm kiếm trong môi trường phức tạp: AND-OR Search, Belief State Search, Comformant Search
 - `Constraint Satisfaction Search`: Nhóm thuật toán tìm kiếm có ràng buộc: Backtracking, Forward-Checking, Look-Ahead (AC-3)
+
+---
+
+### 2. Nội dung
+
+Bài tập được xây dựng với Customtkinter, package hỗ trợ UI mang đến sự thân thiện cho người dùng và người lập trình
+
