@@ -54,3 +54,8 @@ Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán t
 - Thư viện cần cài đặt: Customtkinter
     cài trong Command hoặc PowerShell: `pip install customtkinter`
 
+---
+
+### 4. Cách sử dụng
+
+- Chạy ứng dụng có name: 
