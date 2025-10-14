@@ -34,7 +34,7 @@ Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán t
 
 - Giao diện trực quan: Hai bảng 8x8 được hiển thị song song:
   -   Board: vẽ quá trình tìm kiếm cách đặt quân.
-  -   Goal Board: hiển thị trạng thái đích ngẫu nhiên (goal state) cho một vài thuật toán cần thiết.
+  -   Goal Board: hiển thị trạng thái đích ngẫu nhiên (goal state) cho một vài thuật toán cần thiết. Goal Board sẽ sinh ngẫu nhiên với mỗi lần chạy chương trình.
 - Hiển thị kết quả thuật toán:
   Các quân xe sẽ được vẽ dần sau mỗi bước duyệt ngầm, chi phí - cost sẽ được cập nhật ngay sau mỗi bước đặt quân và thời gian - time sẽ được cập nhật mới khi chạy xong một quá trình đặt quân.
 - Các thuật toán được sử dụng:
@@ -43,4 +43,14 @@ Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán t
   - `Local Search`: Hill Climbing, Simulated Annealing, Beam Search, Genetic
   - `Non-deterministic`: AND-OR Search, Belief State Search, Comformant Search
   - `Constraint Satisfaction Problem Search`: Backtracking, Forward-Checking, Look-Ahead (AC-3)
+- Nút Clear Board: Dùng để xóa toàn bộ quân xe trên Board và reset lại các lựa chọn thuật toán.
+- Nút Run: Chạy thuật toán đã chọn để tiến hành quá trình đặt quân xe.
+
+---
+
+### 3. Yêu cầu
+- Ngôn ngữ lập trình: `Python`
+- Các thư viện được xài: `customtkinter`, `tkinter`, `math`, `random`.
+- Thư viện cần cài đặt: Customtkinter
+    cài trong Command hoặc PowerShell: `pip install customtkinter`
 
