@@ -69,7 +69,7 @@ Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán t
 - Xóa kết quả và chạy lại:
   - Nhấn `Clear Board` để xóa bàn cờ hiện tại và có thể chạy lại thuật toán hoặc chọn lại 1 thuật toán khác.
 
- ---
+---
 
 ### 5. Cấu trúc file `23110131_TrinhDaiNghia_BaitapCanhan.py`
 
@@ -79,3 +79,10 @@ Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán t
 - Định nghĩa các hàm thuật toán tìm kiếm (BFS, DFS, UCS, A*, Hill Climbing, v.v…) và các hàm con cần thiết.
 - Khởi tạo các comboBox dùng để chứa và xếp các thuật toán theo đúng nhóm thuật toán.
 - Khởi tạo 2 nút `Run` và `Clear Board`
+
+---
+
+### 6. Kết quả chạy thử các thuật toán theo từng nhóm.
+
+- Uninformed Search:
+  ![GIF 1](assets/bandicam 2025-10-23 22-03-14-654.mp4.gif)
