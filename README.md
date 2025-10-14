@@ -33,6 +33,6 @@ Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán t
 ### 2. Tính năng chính
 
 - Giao diện trực quan: Hai bảng 8x8 được hiển thị song song:
-      - Board: vẽ quá trình tìm kiếm cách đặt quân.
-      - Goal Board: hiển thị trạng thái đích ngẫu nhiên (goal state) cho một vài thuật toán cần thiết.
+-   Board: vẽ quá trình tìm kiếm cách đặt quân.
+-   Goal Board: hiển thị trạng thái đích ngẫu nhiên (goal state) cho một vài thuật toán cần thiết.
 
