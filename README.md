@@ -93,3 +93,47 @@ Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán t
     - Path Cost: Mỗi bước được tính 1, do đó Path Cost ≈ Path Length.
     - Time Taken: BFS tốn nhiều thời gian với N lớn; DFS nhanh hơn nhưng không đảm bảo ngắn nhất; IDS có thời gian trung bình cao do lặp lại search.
     - Khả năng tìm giải pháp: BFS luôn tìm nếu tồn tại; DFS/DLS có thể fail nếu giới hạn sâu quá thấp; IDS đáng tin cậy với N nhỏ và trung bình.
+   
+- Informed Search:
+  ![Informed Search GIF](assets/informed.gif)
+  - Đánh giá: Informed Search: UCS, Greedy, A* (Có dùng Cost, Heuristic, Goal), riêng UCS không dùng Goal:
+    - Đặc trưng: Sử dụng cost (UCS) hoặc heuristic (Greedy, A*) để hướng tới trạng thái goal.
+    - Steps Explored: UCS mở rộng trạng thái dựa trên tổng chi phí, ít thừa hơn BFS; Greedy mở rộng ít hơn nhưng không đảm bảo tối ưu. A* cân bằng giữa chi phí và heuristic, thường ít steps nhất trong nhóm này.
+    - Path Length: UCS và A* thường cho path tối ưu hoặc gần tối ưu; Greedy đôi khi dài hơn.
+    - Path Cost: UCS và A* tính chính xác theo hàm cost_UCS; Greedy chỉ dựa trên heuristic nên cost thực tế có thể cao hơn.
+    - Time Taken: UCS và A* chậm hơn Greedy do tính toán chi phí/phương án nhiều hơn.
+    - Khả năng tìm giải pháp: A* và UCS đảm bảo tìm solution; Greedy có thể bị stuck nếu heuristic không hoàn hảo
+
+- Local Search:
+  ![Local Search GIF](assets/local.gif)
+  - Đánh giá: Nhóm Local Search: Hill Climbing, Simulated Annealing, Beam Search, Genetic Algorithm:
+    - Đặc trưng: Không đảm bảo mở rộng toàn bộ trạng thái; dựa trên heuristic hoặc quần thể; đôi khi stochastic. Hill Climbing, Simulated Annealing không dùng goal, Beam Search, Genetic Algorithm có dùng
+    - Steps Explored: HC ít steps nhưng dễ mắc local optimum; SA thêm stochastic để thoát local optimum, steps nhiều hơn; Beam Search giới hạn k-best, số steps kiểm soát được; GA phụ thuộc vào số thế hệ và size quần thể.
+    - Path Length: HC/SA/Beam/GA thường tìm đường đi gần optimal nhưng không đảm bảo ngắn nhất.
+    - Path Cost: Heuristic được cập nhật liên tục (update_Cost); GA sử dụng fitness/chi phí khác nhau.
+    - Time Taken: HC nhanh; SA lâu hơn; Beam/GA tùy chỉnh được theo beam size/quần thể.
+    - Khả năng tìm giải pháp: HC dễ fail nếu stuck; SA cải thiện khả năng tìm; Beam/GA khả năng tìm solution tốt nếu tham số hợp lý.
+
+- Non-deterministic:
+  ![Non-deterministic GIF](assets/non_deterministic.gif)
+  - Đánh giá: Belief State Search, Conformant Search
+    - Đặc trưng: Xử lý uncertain initial states (belief states), mở rộng tập hợp trạng thái.
+    - Steps Explored: Lớn hơn các search thông thường do mở rộng từng belief, kết hợp nhiều state cùng lúc.
+    - Path Length: Bằng N; nhưng animate từng step cho từng state trong belief.
+    - Path Cost: Cập nhật dựa trên heuristic hoặc số bước apply action trên belief.
+    - Time Taken: Cao nhất trong tất cả nhóm do combinatorial belief expansion.
+    - Khả năng tìm giải pháp: Tìm solution nếu belief đủ “bao phủ” ban đầu; Conformant Search phụ thuộc sample size để tìm plan.
+  - Đánh giá riêng: And-Or Search
+    - Mục tiêu thử nghiệm: Tìm kế hoạch từ trạng thái khởi đầu đến goal board trong trò chơi 8 quân XE.
+    - Kết quả quan sát:
+      - Thuật toán không tìm ra solution trong các lần chạy thử (tất cả các state khởi đầu và belief được sinh ra).
+      - Không phải do lỗi code, mà do bản chất AND–OR Search: khi AND node yêu cầu tất cả các outcome con phải dẫn tới solution, trong môi trường 8 quân XE với state được sinh ngẫu nhiên, hầu hết các nhánh không thỏa điều kiện AND → thuật toán dừng sớm.
+    - Giải thích:
+      - Trong source code, hàm OrSearch gọi AndSearch với tập các outcomes. Nếu bất kỳ outcome nào không có plan, toàn bộ nhánh AND bị loại.
+      - Do mỗi state con được sinh ngẫu nhiên qua get_outcomes, xác suất tìm được một nhánh hoàn chỉnh dẫn tới goal board gần như bằng 0.
+      - Đây là đặc điểm logic của AND–OR: phải đảm bảo mọi nhánh con của AND node đều thành công → khó tìm solution trong trò chơi 8 quân XE.
+    - Kết luận thử nghiệm:
+      - And-Or Search không chạy thành công trong môi trường này, nhưng phản ánh đúng bản chất kế hoạch AND–OR, thích hợp cho các bài toán planning có các action deterministically đảm bảo tất cả outcome thành công.
+      - Hiệu năng không thể đánh giá bằng steps, path length hay time, vì thuật toán dừng trước khi sinh ra bất kỳ plan hợp lệ nào
+
+ 
