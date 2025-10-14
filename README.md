@@ -136,4 +136,13 @@ Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán t
       - And-Or Search không chạy thành công trong môi trường này, nhưng phản ánh đúng bản chất kế hoạch AND–OR, thích hợp cho các bài toán planning có các action deterministically đảm bảo tất cả outcome thành công.
       - Hiệu năng không thể đánh giá bằng steps, path length hay time, vì thuật toán dừng trước khi sinh ra bất kỳ plan hợp lệ nào
 
- 
+- Constraint Satisfaction Problem Search:
+  ![Constraint Satisfaction Problem Search GIF](assets/csp.gif)
+  - Đánh giá: Nhóm CSP: Backtracking, Forward Checking, Look-Ahead/AC3 (Không dùng Goal)
+    - Đặc trưng: Xử lý bài toán ràng buộc (constraint) trực tiếp, đảm bảo không vi phạm quy tắc 8 quân XE.
+    - Steps Explored: Backtracking mở rộng nhiều trạng thái nếu không prune; FC giảm steps nhờ forward checking; Look-Ahead (MAC/AC3) prune mạnh mẽ, steps ít hơn hẳn.
+    - Path Length: Luôn bằng N (đặt đủ 8 quân).
+    - Path Cost: Path Cost = N hoặc số bước duyệt; tính đúng theo số bước đặt quân.
+    - Time Taken: Backtracking lâu nhất, FC nhanh hơn; Look-Ahead nhanh nhất nhờ prune mạnh.
+    - Khả năng tìm giải pháp: Tất cả đảm bảo tìm solution nếu tồn tại, Look-Ahead ổn định nhất với N lớn
+
