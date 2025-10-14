@@ -87,9 +87,9 @@ Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán t
 - Uninformed Search:
   ![Uniformed Search GIF](assets/uninformed.gif)
   - Đánh giá: Uninformed Search BFS, DFS, DLS, IDS (Không dùng bàn cờ goal):
-    •	Đặc trưng: Mở rộng trạng thái tuần tự (FIFO cho BFS, LIFO cho DFS/DLS/IDS), không sử dụng heuristic.
-    •	Steps Explored: BFS mở rộng nhiều trạng thái nhất nhưng tìm đường đi ngắn nhất về số bước. DFS/DLS/IDS ít steps hơn nhưng dễ rơi vào dead-end, đặc biệt DLS giới hạn sâu.
-    •	Path Length: BFS thường trả về đường đi ngắn nhất; DFS/DLS/IDS có thể trả về đường đi dài hơn. IDS thường là giải pháp tối ưu về độ dài nhưng có overhead do lặp lại các depth-limited search.
-    •	Path Cost: Mỗi bước được tính 1, do đó Path Cost ≈ Path Length.
-    •	Time Taken: BFS tốn nhiều thời gian với N lớn; DFS nhanh hơn nhưng không đảm bảo ngắn nhất; IDS có thời gian trung bình cao do lặp lại search.
-    •	Khả năng tìm giải pháp: BFS luôn tìm nếu tồn tại; DFS/DLS có thể fail nếu giới hạn sâu quá thấp; IDS đáng tin cậy với N nhỏ và trung bình.
+    - Đặc trưng: Mở rộng trạng thái tuần tự (FIFO cho BFS, LIFO cho DFS/DLS/IDS), không sử dụng heuristic.
+    - Steps Explored: BFS mở rộng nhiều trạng thái nhất nhưng tìm đường đi ngắn nhất về số bước. DFS/DLS/IDS ít steps hơn nhưng dễ rơi vào dead-end, đặc biệt DLS giới hạn sâu.
+    - Path Length: BFS thường trả về đường đi ngắn nhất; DFS/DLS/IDS có thể trả về đường đi dài hơn. IDS thường là giải pháp tối ưu về độ dài nhưng có overhead do lặp lại các depth-limited search.
+    - Path Cost: Mỗi bước được tính 1, do đó Path Cost ≈ Path Length.
+    - Time Taken: BFS tốn nhiều thời gian với N lớn; DFS nhanh hơn nhưng không đảm bảo ngắn nhất; IDS có thời gian trung bình cao do lặp lại search.
+    - Khả năng tìm giải pháp: BFS luôn tìm nếu tồn tại; DFS/DLS có thể fail nếu giới hạn sâu quá thấp; IDS đáng tin cậy với N nhỏ và trung bình.
