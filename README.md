@@ -68,3 +68,14 @@ Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán t
   - Cost sẽ cập nhật liên tục sau mỗi lần đặt quân. Sau khi hoàn tất sẽ hiển thị thời gian - Time chạy thuật toán.
 - Xóa kết quả và chạy lại:
   - Nhấn `Clear Board` để xóa bàn cờ hiện tại và có thể chạy lại thuật toán hoặc chọn lại 1 thuật toán khác.
+
+ ---
+
+### 5. Cấu trúc file `23110131_TrinhDaiNghia_BaitapCanhan.py`
+
+- Khởi tạo, cấu hình UI với `Customtkinter`.
+- Vẽ bảng 8x8 gồm BoardA - bàn cờ dùng để vẽ và Goal Board - bàn cờ mục tiêu (goal state).
+- Các hàm tiện ích: vẽ quân xe, update cost/time, clear board.
+- Định nghĩa các hàm thuật toán tìm kiếm (BFS, DFS, UCS, A*, Hill Climbing, v.v…) và các hàm con cần thiết.
+- Khởi tạo các comboBox dùng để chứa và xếp các thuật toán theo đúng nhóm thuật toán.
+- Khởi tạo 2 nút `Run` và `Clear Board`
