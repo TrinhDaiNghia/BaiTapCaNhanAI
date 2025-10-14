@@ -15,7 +15,7 @@ ctk.set_default_color_theme("blue")   # "blue", "green", "dark-blue"
 
 # ================== Root ==================
 root = ctk.CTk()
-root.title("Two 8x8 Boards")
+root.title("Search Algorithms Solve 8 Rooks")
 root.geometry("1660x900")
 root.rowconfigure(0, weight=1)
 root.columnconfigure(0, weight=1)
