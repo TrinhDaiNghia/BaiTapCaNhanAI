@@ -9,6 +9,7 @@
 
 ---
 ## Search Algorithms Solve 8 Rooks
+
 ### Tổng Quan
 
 Ứng dụng này là một UI mô phỏng trực quan cách các thuật toán tìm kiếm đăt 8 quân xe cho bài toán 8-Rooks (quân xe), được xây dựng bằng ngôn ngữ lập trình Python với `Customtkinter` và `tkinter`.
