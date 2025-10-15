@@ -7,6 +7,7 @@
 
 **Ngày nộp:** 15/10/2025
 
+**Link github:** https://github.com/TrinhDaiNghia/BaiTapCaNhanAI
 ---
 ## Search Algorithms Solve 8 Rooks
 
