@@ -96,7 +96,7 @@ Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán t
     - Khả năng tìm giải pháp: BFS luôn tìm nếu tồn tại; DFS/DLS có thể fail nếu giới hạn sâu quá thấp; IDS đáng tin cậy với N nhỏ và trung bình.
    
 - Informed Search:
-  ![Informed Search GIF](assets/informed.gif)
+  ![Informed Search GIF](https://github.com/TrinhDaiNghia/BaiTapCaNhanAI/blob/main/assets/informed.gif?raw=true)
   - Đánh giá: Informed Search: UCS, Greedy, A* (Có dùng Cost, Heuristic, Goal), riêng UCS không dùng Goal:
     - Đặc trưng: Sử dụng cost (UCS) hoặc heuristic (Greedy, A*) để hướng tới trạng thái goal.
     - Steps Explored: UCS mở rộng trạng thái dựa trên tổng chi phí, ít thừa hơn BFS; Greedy mở rộng ít hơn nhưng không đảm bảo tối ưu. A* cân bằng giữa chi phí và heuristic, thường ít steps nhất trong nhóm này.
@@ -106,7 +106,7 @@ Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán t
     - Khả năng tìm giải pháp: A* và UCS đảm bảo tìm solution; Greedy có thể bị stuck nếu heuristic không hoàn hảo
 
 - Local Search:
-  ![Local Search GIF](assets/local.gif)
+  ![Local Search GIF](https://github.com/TrinhDaiNghia/BaiTapCaNhanAI/blob/main/assets/local.gif?raw=true)
   - Đánh giá: Nhóm Local Search: Hill Climbing, Simulated Annealing, Beam Search, Genetic Algorithm:
     - Đặc trưng: Không đảm bảo mở rộng toàn bộ trạng thái; dựa trên heuristic hoặc quần thể; đôi khi stochastic. Hill Climbing, Simulated Annealing không dùng goal, Beam Search, Genetic Algorithm có dùng
     - Steps Explored: HC ít steps nhưng dễ mắc local optimum; SA thêm stochastic để thoát local optimum, steps nhiều hơn; Beam Search giới hạn k-best, số steps kiểm soát được; GA phụ thuộc vào số thế hệ và size quần thể.
@@ -116,7 +116,7 @@ Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán t
     - Khả năng tìm giải pháp: HC dễ fail nếu stuck; SA cải thiện khả năng tìm; Beam/GA khả năng tìm solution tốt nếu tham số hợp lý.
 
 - Non-deterministic:
-  ![Non-deterministic GIF](assets/non_deterministic.gif)
+  ![Non-deterministic GIF](https://github.com/TrinhDaiNghia/BaiTapCaNhanAI/blob/main/assets/non_deterministic.gif?raw=true)
   - Đánh giá: Belief State Search, Conformant Search
     - Đặc trưng: Xử lý uncertain initial states (belief states), mở rộng tập hợp trạng thái.
     - Steps Explored: Lớn hơn các search thông thường do mở rộng từng belief, kết hợp nhiều state cùng lúc.
@@ -138,7 +138,7 @@ Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán t
       - Hiệu năng không thể đánh giá bằng steps, path length hay time, vì thuật toán dừng trước khi sinh ra bất kỳ plan hợp lệ nào
 
 - Constraint Satisfaction Problem Search:
-  ![Constraint Satisfaction Problem Search GIF](assets/csp.gif)
+  ![Constraint Satisfaction Problem Search GIF](https://github.com/TrinhDaiNghia/BaiTapCaNhanAI/blob/main/assets/csp.gif?raw=true)
   - Đánh giá: Nhóm CSP: Backtracking, Forward Checking, Look-Ahead/AC3 (Không dùng Goal)
     - Đặc trưng: Xử lý bài toán ràng buộc (constraint) trực tiếp, đảm bảo không vi phạm quy tắc 8 quân XE.
     - Steps Explored: Backtracking mở rộng nhiều trạng thái nếu không prune; FC giảm steps nhờ forward checking; Look-Ahead (MAC/AC3) prune mạnh mẽ, steps ít hơn hẳn.
