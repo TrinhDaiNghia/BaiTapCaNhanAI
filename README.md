@@ -86,7 +86,7 @@ Có 5 nhóm thuật toán tìm kiếm được sử dụng, các thuật toán t
 ### 6. Kết quả chạy thử các thuật toán theo từng nhóm.
 
 - Uninformed Search:
-  ![Uniformed Search GIF](assets/uninformed.gif)
+  ![Uniformed Search GIF](https://github.com/TrinhDaiNghia/BaiTapCaNhanAI/blob/main/assets/uninformed.gif?raw=true)
   - Đánh giá: Uninformed Search BFS, DFS, DLS, IDS (Không dùng bàn cờ goal):
     - Đặc trưng: Mở rộng trạng thái tuần tự (FIFO cho BFS, LIFO cho DFS/DLS/IDS), không sử dụng heuristic.
     - Steps Explored: BFS mở rộng nhiều trạng thái nhất nhưng tìm đường đi ngắn nhất về số bước. DFS/DLS/IDS ít steps hơn nhưng dễ rơi vào dead-end, đặc biệt DLS giới hạn sâu.
