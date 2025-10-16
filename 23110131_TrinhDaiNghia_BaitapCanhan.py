@@ -901,7 +901,7 @@ def FCSearch():
 
 
 def is_consistent(i, x ,j,y):
-    return x!=j
+    return x!=y
 
 def Look_AheadSearch():
     start = time.time()
@@ -1039,8 +1039,6 @@ def belief_Search():
 def ConformantSearch():
         start_time = time.time()
 
-        # --- Build a sampled initial belief (set of full board states) ---
-        # We sample a modest number of random full assignments to keep search feasible.
         sample_size = 40  # thay đổi nếu muốn (giảm để nhanh hơn, tăng để "độ phủ" belief cao hơn)
 
         def random_full_state():
@@ -1051,7 +1049,6 @@ def ConformantSearch():
         while len(initial_belief) < sample_size:
             initial_belief.add(random_full_state())
 
-        # --- Actions: set each row r to the goal column goal[r] (overwrite) ---
         # goal (list) đã được tạo ở phần trên của file: goal = Goal_Board()
         actions = [('set_row', r, goal[r]) for r in range(N)]
 
