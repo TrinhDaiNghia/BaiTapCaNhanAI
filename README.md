@@ -165,6 +165,5 @@ Dựa trên kết quả thực nghiệm, có thể xác định một số hư�
 
 Nhìn chung, các định hướng trên không chỉ giúp tăng hiệu quả và tốc độ thực thi, mà còn mở rộng khả năng ứng dụng sang các bài toán CSP phức tạp, lập kế hoạch phi xác định, và các bài toán Local / Metaheuristic trong không gian trạng thái lớn hơn. Đây chính là nền tảng để xây dựng một hệ thống giải thuật mạnh mẽ, linh hoạt và gần thực tế hơn cho trò chơi 8 quân XE cũng như các bài toán mở rộng tương tự.
 
-# Cuối cùng em xin cảm ơn Thầy/Cô/Các anh chị đã xem qua bài làm của em. Mến chúc Thầy/Cô/Các anh chị sức khỏe và thành công! 
+# Cuối cùng em xin cảm ơn Thầy/Cô/Các anh chị đã xem qua bài làm của em. Chúc Thầy/Cô/Các anh chị sức khỏe và thành công. Em xin cảm ơn! 
 
- sức khỏe và thành công!
