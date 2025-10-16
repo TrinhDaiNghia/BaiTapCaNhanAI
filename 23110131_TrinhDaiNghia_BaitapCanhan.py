@@ -962,49 +962,40 @@ def AC3(domains, const):
     return True
 
 def belief_successors(belief):
-    """Sinh các belief kế tiếp (mỗi belief chứa 1 tập trạng thái con hợp lệ)."""
     successors = []
-
-    # Với mỗi state trong belief hiện tại
     for state in belief:
-        child_states = get_state(list(state))
-        # Mỗi child state tạo thành 1 belief riêng (để mở rộng độc lập)
-        for child in child_states:
+        for child in get_state(list(state)):
             successors.append(set([tuple(child)]))
-
     return successors
 
 
 def belief_Search():
     start_time = time.time()
-    start = tuple([])          # trạng thái khởi đầu
-    belief = set([start])      # belief ban đầu: chỉ có 1 state rỗng
-
-    frontier = deque([belief]) # hàng đợi các belief cần mở rộng
-    visited = set()            # đánh dấu belief đã thăm
+    start = frozenset([tuple([])])
+    frontier = deque([start])
+    visited = set()
     parent = {}
     solution = None
 
     while frontier:
         curr_b = frontier.popleft()
-
-        if frozenset(curr_b) in visited:
+        if curr_b in visited:
             continue
-        visited.add(frozenset(curr_b))
+        visited.add(curr_b)
 
-        # Kiểm tra nếu belief hiện tại chứa goal
-        for state in curr_b:
-            if is_goal(list(state)):
+        # goal test: nếu bất kỳ state trong belief là goal
+        for st in curr_b:
+            if is_goal(list(st)):
                 solution = curr_b
                 break
         if solution:
             break
 
-        # Sinh các belief kế tiếp
-        for succ_b in belief_successors(curr_b):
-            if frozenset(succ_b) not in visited:
-                frontier.append(succ_b)
-                parent[frozenset(succ_b)] = frozenset(curr_b)
+        for succ_b in belief_successors(curr_b):   # trả list of frozenset
+            succ_f = frozenset(succ_b)
+            if succ_f not in visited:
+                frontier.append(succ_f)
+                parent[succ_f] = curr_b   # curr_b và succ_f là frozenset
 
     # Nếu có solution
     if solution:
