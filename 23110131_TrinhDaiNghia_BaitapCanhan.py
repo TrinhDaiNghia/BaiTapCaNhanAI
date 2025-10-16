@@ -507,6 +507,7 @@ def ASSearch_8Cars():
 
     # nếu tìm được solution, reconstruct path và animate
     if solution is not None:
+        #backtrack từ solution ngược lại về start_key thông qua came_from.
         path_keys = []
         k = tuple(solution)
         while True:
@@ -757,7 +758,7 @@ def get_outcomes(state):
     random.shuffle(cols)
     for c in cols:
         if is_safe(state,row, c):
-            outcomes.append(state)
+            outcomes.append(state + [c])
 
     return outcomes
 
